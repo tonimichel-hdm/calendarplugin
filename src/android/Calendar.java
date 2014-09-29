@@ -20,7 +20,7 @@ public class Calendar extends CordovaPlugin {
 			if(ACTION_ADD_CALENDAR_ENTRY.equals(action)) {
 				JSONObject arg_object = args.getJSONObject(0);
 				Intent callIntent = new Intent(Intent.ACTION_EDIT)
-					.setType("vnd.android.cursor.item/event");
+					.setType("vnd.android.cursor.item/event")
 				 	.putExtra("beginTime", arg_object.getLong("startTimeMillis"))
 			        .putExtra("endTime", arg_object.getLong("endTimeMillis"))
 			        .putExtra("title", arg_object.getString("title"))
